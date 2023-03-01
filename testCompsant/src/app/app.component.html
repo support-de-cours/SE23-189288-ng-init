@@ -1,0 +1,58 @@
+<h2>Data Binding</h2>
+
+{{ title }}
+
+<hr>
+
+
+
+<h2>Property Binding</h2>
+
+<img [src]="image_url">
+
+<hr>
+
+
+
+<h2>Event Binding</h2>
+
+<button (click)="sayHello()">Obi Wan say Hello</button>
+
+<hr>
+
+
+
+<h2>Two Way Binding</h2>
+
+<div>Name: {{ firstname }}</div>
+<input [(ngModel)]="firstname">
+
+
+
+<hr>
+
+<h2>Array Fruits</h2>
+
+{{ fruits }}
+
+<ul>
+  <li *ngFor="let fruit of fruits; let i = index">{{ i }} - {{ fruit }}</li>
+</ul>
+
+
+
+
+<hr>
+
+<h2>Object user</h2>
+
+{{ user }}
+<br>
+{{ user.firstname }}
+<br>
+{{ user | json }}
+
+
+<hr>
+
+{{ result }}
