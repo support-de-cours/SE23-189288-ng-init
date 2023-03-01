@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { SayHelloComponent } from './say-hello/say-hello.component';
+import { PizzaComponent } from './pizza/pizza.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SayHelloComponent
+    SayHelloComponent,
+    PizzaComponent
   ],
   imports: [
     BrowserModule,
