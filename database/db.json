@@ -1,0 +1,16 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "My awesome book !!",
+      "description": "This is just an awesome book !",
+      "price": 99.99
+    },
+    {
+        "id": 2,
+        "title": "My second book !!",
+        "description": "This is just an awesome book !",
+        "price": 99.99
+      }
+  ]
+}
