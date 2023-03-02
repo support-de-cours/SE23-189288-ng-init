@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContactComponent } from './pages/contact/contact.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 
 const routes: Routes = [
@@ -8,12 +7,6 @@ const routes: Routes = [
   {
     path: 'homepage',
     component: HomepageComponent
-  },
-
-  // Contact
-  {
-    path: 'contact',
-    component: ContactComponent
   },
 
   // Default

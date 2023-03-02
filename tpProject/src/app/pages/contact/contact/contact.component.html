@@ -1,0 +1,50 @@
+<p>Keep in touch</p>
+
+<!--
+<div>
+    <!-- firstname --
+    <input type="text" [formControl]="firstnameControl" aria-label="Firstname">
+</div>
+
+<div>
+    <!-- lastname --
+    <input type="text" [formControl]="lastnameControl" aria-label="Lastname">
+</div>
+
+<div>
+    <!-- email --
+    <input type="text" [formControl]="emailControl" aria-label="Email">
+</div>
+
+<div>
+    <!-- message --
+    <textarea [formControl]="messageControl"></textarea>
+</div>
+
+<button type="button" (click)="submitContact()">Send</button>
+-->
+
+<div>
+    <!-- firstname -->
+    <input type="text" 
+        [formControl]="contactForm.controls.firstname" 
+        [class.isInvalid]="!contactForm.controls.firstname.valid"
+        aria-label="Firstname">
+</div>
+
+<div>
+    <!-- lastname -->
+    <input type="text" [formControl]="contactForm.controls.lastname" aria-label="Lastname">
+</div>
+
+<div>
+    <!-- email -->
+    <input type="text" [formControl]="contactForm.controls.email" aria-label="Email">
+</div>
+
+<div>
+    <!-- message -->
+    <textarea [formControl]="contactForm.controls.message"></textarea>
+</div>
+
+<button type="button" (click)="submitContact()" [disabled]="!contactForm.valid">Send</button>
