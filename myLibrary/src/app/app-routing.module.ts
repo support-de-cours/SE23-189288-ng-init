@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DetailComponent as BookDetailComponent } from './modules/book/detail/detail.component';
-import { IndexComponent as BookIndexComponent } from './modules/book/index/index.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
+// import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
+
   // Homepage
   // site.com/homepage
   {
@@ -12,31 +12,22 @@ const routes: Routes = [
     component: HomepageComponent
   },
 
-  // Book List (index)
-  // site.com/books
-  {
-    path: 'books',
-    component: BookIndexComponent
-  },
-
-  // Book Detail
-  // site.com/books/42
-  {
-    path: 'books/:id',
-    component: BookDetailComponent
-  },
-
 
   // Default
-  // site.com
+  // site.com/
   {
     path: '',
     pathMatch: 'full',
     redirectTo: '/homepage'
-  }
+  },
 
 
-  // Not Found
+  // Not Found / Wildcard route
+  // Method : Lazy Loading
+  {
+    path: '**',
+    loadChildren: () => import('./pages/not-found/not-found.module').then(m => m.NotFoundModule)
+  },
 
 ];
 
