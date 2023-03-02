@@ -5,3 +5,26 @@ Creation d'un projet avec 3 pages
 - Contact
 
 - NotFound
+
+========================================================================
+
+ng new tpProject
+> routing ? Y
+> stylesheet ? CSS
+
+cd tpProject
+
+
+ng generate component pages/homepage
+
+ng generate module pages/todo --routing
+// ng generate component pages/todo/todo
+ng generate component pages/todo/page/main
+ng generate component pages/todo/components/form
+ng generate component pages/todo/components/list
+ng generate component pages/todo/service/todo
+
+ng generate component pages/contact
+
+ng generate module pages/not-found --routing
+ng generate component pages/not-found/not-found
