@@ -24,6 +24,10 @@
 <button type="button" (click)="submitContact()">Send</button>
 -->
 
+<ng-container *ngIf="formAsError">
+    ERROR
+</ng-container>
+
 <div>
     <!-- firstname -->
     <input type="text" 

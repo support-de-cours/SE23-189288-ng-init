@@ -9,6 +9,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ContactComponent {
 
+  public formAsError: boolean = false;
+
   constructor(
     private httpClient: HttpClient
   ){}
@@ -49,7 +51,7 @@ export class ContactComponent {
     if (this.contactForm.valid)
     {
       this.httpClient
-        .post('http://localhost:3000/contactttt', this.contactForm.value)
+        .post('contact', this.contactForm.value)
         .subscribe(data => {
           this.contactForm.reset();
         });

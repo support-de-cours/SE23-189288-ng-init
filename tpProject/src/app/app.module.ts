@@ -8,6 +8,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { ContactModule } from './pages/contact/contact.module';
 import { TodoModule } from './pages/todo/todo.module';
 import { ErrorHandlerInterceptor } from './interceptors/error-handler.interceptor';
+import { EndpointInterceptor } from './interceptors/endpoint.interceptor';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ErrorHandlerInterceptor } from './interceptors/error-handler.intercepto
     HttpClientModule
   ],
   providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: EndpointInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorHandlerInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
