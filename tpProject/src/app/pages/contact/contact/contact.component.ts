@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -7,6 +8,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
+
+  constructor(
+    private httpClient: HttpClient
+  ){}
+
   // public firstnameControl = new FormControl();
   // public lastnameControl = new FormControl();
   // public emailControl = new FormControl();
@@ -38,10 +44,15 @@ export class ContactComponent {
     ])
   });
 
-  
-
   submitContact()
   {
-    console.log(this.contactForm.value);
+    if (this.contactForm.valid)
+    {
+      this.httpClient
+        .post('http://localhost:3000/contactttt', this.contactForm.value)
+        .subscribe(data => {
+          this.contactForm.reset();
+        });
+    }
   }
 }

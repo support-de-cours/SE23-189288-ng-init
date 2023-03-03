@@ -15,6 +15,11 @@ export class FormComponent {
 
   save(): void
   {
+    if (!this.item.length)
+    {
+      return;
+    }
+
     this.todoService.item = this.item;
     this.item = '';
   }

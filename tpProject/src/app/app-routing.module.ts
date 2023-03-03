@@ -11,6 +11,7 @@ const routes: Routes = [
   },
 
   // Default
+  // site.com/
   {
     path: '',
     pathMatch: 'full',
