@@ -1,0 +1,32 @@
+<div>
+  Angular menu : 
+  <nav>
+    <a [routerLink]="['/page-a']">Page A</a> -
+    <a [routerLink]="['/page-b']">Page B</a> -
+    <a [routerLink]="['/page-c']">Page C</a> -
+    <a [routerLink]="['/page-d', {outlets: {router_left: ['My param value']}}]">Page D.1</a> -
+    <a [routerLink]="['/page-d', {outlets: {router_left: ['My param value'], router_right: ['']}}]">Page D.2</a> -
+    <a [routerLink]="['/page-e']">Page E</a>
+  </nav>
+</div>
+<hr>
+
+
+<div class="container">
+  <div class="router-container">
+
+    Left Router outlet 
+    <hr>
+
+    <router-outlet name="router_left"></router-outlet>
+
+  </div>
+  <div class="router-container">
+
+    Right Router outlet 
+    <hr>
+
+    <router-outlet name="router_right"></router-outlet>
+
+  </div>
+</div>

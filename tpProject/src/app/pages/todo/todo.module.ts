@@ -6,6 +6,7 @@ import { MainComponent } from './page/main/main.component';
 import { FormComponent } from './components/form/form.component';
 import { ListComponent } from './components/list/list.component';
 import { FormsModule } from '@angular/forms';
+import { ContactModule } from '../contact/contact.module';
 
 
 @NgModule({
@@ -16,8 +17,12 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
+    ContactModule,
     TodoRoutingModule,
     FormsModule
+  ],
+  exports: [
+    MainComponent
   ]
 })
 export class TodoModule { }

@@ -4,6 +4,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 
 const routes: Routes = [
   // Homepage
+  // site.com/homepage
   {
     path: 'homepage',
     component: HomepageComponent

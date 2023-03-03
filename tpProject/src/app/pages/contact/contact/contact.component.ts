@@ -38,6 +38,8 @@ export class ContactComponent {
     ])
   });
 
+  
+
   submitContact()
   {
     console.log(this.contactForm.value);
